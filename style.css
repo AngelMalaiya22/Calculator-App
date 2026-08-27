@@ -1,0 +1,197 @@
+/* =========================
+   Global Styles
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+}
+
+
+/* =========================
+   Calculator
+========================= */
+
+.calculator {
+    width: 340px;
+    padding: 20px;
+
+    background: #1e293b;
+
+    border-radius: 20px;
+
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25);
+}
+
+
+/* =========================
+   Display
+========================= */
+
+.display {
+    height: 90px;
+
+    margin-bottom: 20px;
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    background: #0f172a;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+#display-value {
+    color: white;
+
+    font-size: 38px;
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+.buttons {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+button {
+    height: 65px;
+
+    border: none;
+    border-radius: 12px;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.15s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+/* =========================
+   Number Buttons
+========================= */
+
+.number,
+.decimal {
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+.number:hover,
+.decimal:hover {
+    background: #e2e8f0;
+}
+
+
+/* =========================
+   Operator Buttons
+========================= */
+
+.operator {
+    background: #6366f1;
+    color: white;
+}
+
+.operator:hover {
+    background: #4f46e5;
+}
+
+
+/* =========================
+   Clear Button
+========================= */
+
+.clear {
+    background: #ef4444;
+    color: white;
+}
+
+.clear:hover {
+    background: #dc2626;
+}
+
+
+/* =========================
+   Equals Button
+========================= */
+
+.equals {
+    grid-row: span 2;
+
+    height: 140px;
+
+    background: #22c55e;
+    color: white;
+}
+
+.equals:hover {
+    background: #16a34a;
+}
+
+
+/* =========================
+   Zero Button
+========================= */
+
+.zero {
+    grid-column: span 2;
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 400px) {
+
+    .calculator {
+        width: 95%;
+    }
+
+    button {
+        height: 60px;
+    }
+
+    .equals {
+        height: 130px;
+    }
+
+    #display-value {
+        font-size: 32px;
+    }
+}
